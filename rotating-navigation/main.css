@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+body {
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+}
+
+h1, h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #fafafa;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 500ms linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+    transform-origin: top left;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-90deg)
+}
+
+.container.show-nav + nav li {
+    transform: translateX(0);
+    transition-delay: 300ms;
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffbb00;
+    transition: transform 500ms linear;
+}
+
+.btn-circle {
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    font-size: 26px;
+    color: black;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.btn-circle:focus {
+    outline-color: transparent;
+}
+
+.btn-open {
+    top: 60%;
+    right: 20%;
+}
+
+.btn-close {
+    top: 50%;
+    left: 15%;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content small {
+    color: #555;
+    font-style: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 30px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 40px 0;
+    transform: translateX(-150%);
+    transition: transform 400ms ease-in;
+}
+
+nav a {
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
