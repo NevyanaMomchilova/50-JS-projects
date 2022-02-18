@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.card {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    background-color: rgb(24, 23, 23);
+    border-radius: 10px;
+    padding: 50px;
+    margin: 15px;
+}
+
+.card-title {
+    color: rgb(248, 246, 228);
+}
+
+.card-text {
+    margin: 15px 0 30px 0;
+}
+
+.card-button-container {
+    display: flex;
+    justify-content: center;
+        align-items: center;
+}
+
+.card-btn {
+    color: black;
+    background-color: khaki;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    transition: transform 400ms ease-out;
+}
+
+.card-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.card-popup-info {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px dotted rgb(248, 246, 228);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 400ms ease-out;
+}
+
+.card-popup-info:hover {
+    background-color: rgba(235, 211, 0, 0.205);
+    transform: scale(1.05);
+}
+
+.card-popup-info span {
+    color: rgb(248, 246, 228);
+}
+
+.card-popup-info {
+    position: relative;
+}
+
+[data-popup]:hover::before,
+[data-popup]:focus::before {
+    content: attr(data-popup);
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+    transform: translateX(-40%);
+    width: 150px;
+    color: black;
+    background-color: khaki;
+    border-radius: 5px;
+    padding: 5px 15px; 
+}
+
+[data-popup]:hover::after,
+[data-popup]:focus::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    transform: translateX(-40%);
+    border-top: 15px solid khaki;
+    border-left: 15px solid transparent;
+    border-right:  15px solid transparent;
+}
