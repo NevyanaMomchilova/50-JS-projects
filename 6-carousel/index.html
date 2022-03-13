@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO meta tags -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+		<!-- Fonts -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./main.css" />
+
+		<!-- Favicon -->
+
+		<!-- Title -->
+		<title>Carousel</title>
+	</head>
+	<body>
+		<div class="carousel">
+            <!-- Previous Button -->
+			<button class="carousel-btn carousel-btn-prev hidden">
+                <img src="./images/icons8-left-arrow-64.png" alt="">
+            </button>
+
+            <!-- Slides -->
+			<div class="carousel-track-container">
+				<ul class="carousel-track">
+					<li class="carousel-slide current-slide">
+                        <img class="carousel-img" src="https://images.unsplash.com/photo-1528255671579-01b9e182ed1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+                    </li>
+					<li class="carousel-slide">
+                        <img class="carousel-img" src="https://images.unsplash.com/photo-1526057372486-90c2459c301b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                    </li>
+					<li class="carousel-slide">
+                        <img class="carousel-img" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+                    </li>
+				</ul>
+			</div>
+
+            <!-- Next Button -->
+			<button class="carousel-btn carousel-btn-next">
+                <img src="./images/icons8-next-64.png" alt="">
+            </button>
+
+            <!-- Slides Indicators -->
+            <div class="carousel-nav">
+                <button class="carousel-indicator current-slide"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+		</div>
+		<!-- JavaScript -->
+		<script src="./main.js"></script>
+	</body>
+</html>
