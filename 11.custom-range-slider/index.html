@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO meta tags -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+		<!-- Fonts -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./main.css" />
+
+		<!-- Favicon -->
+
+		<!-- Title -->
+		<title>Title</title>
+	</head>
+	<body>
+		<div class="range-container">
+            <label for="range-input">range-input-label</label>
+            <div class="range-value-container">
+                <span id="range-value">10</span>
+            </div>
+			
+			<input
+				type="range"
+				value="10"
+				min="0"
+				max="20"
+				onChange="setRangeValue(this.value)"
+                onmousemove="setRangeValue(this.value)"
+                class="range-input"
+                id="range-input"
+			/>
+		</div>
+		<!-- JavaScript -->
+		<script>
+			function setRangeValue(value) {
+				let rangeValue = document.getElementById("range-value");
+				rangeValue.innerHTML = value;
+                rangeValue.style.left = (value /2) * 10 + "%";
+			}
+		</script>
+	</body>
+</html>
