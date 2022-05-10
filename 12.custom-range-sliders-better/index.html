@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO meta tags -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+		<!-- Fonts -->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./main.css" />
+
+		<!-- Favicon -->
+
+		<!-- Title -->
+		<title>Title</title>
+	</head>
+	<body>
+		<!-- Custom Thumb and Progress + Tooltip -->
+		<div class="range-slider">
+			<input type="range" min="0" max="100" value="50" class="slider" />
+			<div class="slider-thumb">
+				<div class="tooltip"></div>
+			</div>
+			<div class="progress"></div>
+		</div>
+		<div class="range-slider">
+			<input type="range" min="0" max="100" value="50" class="slider" />
+			<div class="slider-thumb">
+				<div class="tooltip"></div>
+			</div>
+			<div class="progress"></div>
+		</div>
+		<!-- JavaScript -->
+		<script>
+			const rangeSliders = document.querySelectorAll(".range-slider");
+
+			rangeSliders.forEach((rangeSlider) => {
+				const slider = rangeSlider.querySelector(".slider");
+				const thumb = rangeSlider.querySelector(".slider-thumb");
+				const tooltip = rangeSlider.querySelector(".tooltip");
+				const progress = rangeSlider.querySelector(".progress");
+
+				function customSlider() {
+					const percentage = (slider.value / slider.max) * 100 + "%";
+
+					tooltip.innerHTML = slider.value;
+
+					progress.style.width = percentage;
+					thumb.style.left = percentage;
+				}
+
+				customSlider();
+
+				slider.addEventListener("input", () => {
+					customSlider();
+				});
+			});
+		</script>
+	</body>
+</html>

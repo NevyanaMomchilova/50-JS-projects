@@ -48,8 +48,8 @@ body {
 
 .range-input::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background: #a9fd00;
     cursor: pointer;
